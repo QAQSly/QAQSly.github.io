@@ -211,6 +211,20 @@
 <li>几何阶段 输出屏幕空间的几何信息</li>
 <li>光栅化阶段</li>
 </ol>
+<h2 id="应用阶段"><a href="#应用阶段" class="headerlink" title="应用阶段"></a>应用阶段</h2><ol>
+<li>视锥剔除</li>
+<li>LOD选择</li>
+<li>设置材质 纹理 Shader</li>
+<li>CPU 输出图元 点 线 面</li>
+<li>关键输出： 需要渲染的模型数据 顶点 法线 UV坐标</li>
+</ol>
+<h2 id="几何阶段"><a href="#几何阶段" class="headerlink" title="几何阶段"></a>几何阶段</h2><ol>
+<li>GUP处理</li>
+<li>顶点着色器 模型空间 -&gt; 裁剪空间 mvp 矩阵变换</li>
+<li>投影裁剪 剔除视锥外的图元 齐次坐标除法 -&gt; NDC坐标</li>
+<li>屏幕映射 NDC坐标 -&gt; 屏幕坐标</li>
+<li>关键输出</li>
+</ol>
       
     </div>
     
