@@ -206,12 +206,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="测试题"><a href="#测试题" class="headerlink" title="测试题"></a><em>测试题</em></h1><ol>
-<li><em>应用阶段的任务中，视锥剔除（Frustum Culling）的目的是什么？如果跳过这一步会对性能产生什么影响?</em></li>
+        <h1 id="测试题"><a href="#测试题" class="headerlink" title="测试题"></a>测试题</h1><ol>
+<li>应用阶段的任务中，视锥剔除（Frustum Culling）的目的是什么？如果跳过这一步会对性能产生什么影响?</li>
 </ol>
 <ul>
 <li>视锥剔除是为了优化性能 只处理摄像机看的到的 减少几何阶段的处理量</li>
 <li>跳过该步骤会消耗GPU性能，导致CPU提交更多的无效的绘制调用Draw Call 增加GPU在几何阶段和光栅化阶段渲染的压力</li>
+</ul>
+<ol start="2">
+<li>在几何阶段，顶点从模型空间变换到裁剪空间需要哪几个矩阵？请解释MVP矩阵的含义。</li>
+</ol>
+<ul>
+<li>三个矩阵 Model矩阵 View矩阵 Projection矩阵</li>
+<li>Model矩阵 Model空间 到世界空间</li>
+<li>View矩阵 世界空间 到摄像机空间 (基于摄像机的位置和朝向)</li>
+<li>Projection矩阵 摄像机空间 到投影空间 (定义视锥体 为后续除法做准备)</li>
 </ul>
 
       
