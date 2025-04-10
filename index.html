@@ -241,44 +241,42 @@
 <ul>
 <li>深度测试发生在片元处理阶段 光栅后之后 （光栅化生成片元之后 写入帧缓冲之前）</li>
 <li>如果深度测试函数为默认的GL_LESS（OpenGL)后续的片元会被丢弃</li>
-<li>可以通过深度测试函数GL_LEQUAL或启用深度偏移Depth Bias解决冲突<table>
-<thead>
-<tr>
-<th>深度测试模式</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ZTest Less</td>
-<td>如果当前片元的深度值小于深度缓冲区中的值，则通过测试。</td>
-</tr>
-<tr>
-<td>ZTest Greater</td>
-<td>如果当前片元的深度值大于深度缓冲区中的值，则通过测试。</td>
-</tr>
-<tr>
-<td>ZTest LEqual</td>
-<td>如果当前片元的深度值小于或等于深度缓冲区中的值，则通过测试。</td>
-</tr>
-<tr>
-<td>ZTest GEqual</td>
-<td>如果当前片元的深度值大于或等于深度缓冲区中的值，则通过测试。</td>
-</tr>
-<tr>
-<td>ZTest Equal</td>
-<td>如果当前片元的深度值等于深度缓冲区中的值，则通过测试。</td>
-</tr>
-<tr>
-<td>ZTest NotEqual</td>
-<td>如果当前片元的深度值不等于深度缓冲区中的值，则通过测试。</td>
-</tr>
-<tr>
-<td>ZTest Always</td>
-<td>无论深度值如何，总是通过测试。</td>
-</tr>
-</tbody></table>
-</li>
+<li>可以通过深度测试函数GL_LEQUAL或启用深度偏移Depth Bias解决冲突</li>
 </ul>
+<table>
+<tr>
+    <th style="background-color: #f2f2f2; color: black;">深度测试模式</th>
+    <th style="background-color: #f2f2f2; color: black;">描述</th>
+</tr>
+<tr>
+    <td>ZTest Less</td>
+    <td>如果当前片元的深度值小于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+    <td>ZTest Greater</td>
+    <td>如果当前片元的深度值大于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+    <td>ZTest LEqual</td>
+    <td>如果当前片元的深度值小于或等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+    <td>ZTest GEqual</td>
+    <td>如果当前片元的深度值大于或等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+    <td>ZTest Equal</td>
+    <td>如果当前片元的深度值等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+    <td>ZTest NotEqual</td>
+    <td>如果当前片元的深度值不等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+    <td>ZTest Always</td>
+    <td>无论深度值如何，总是通过测试。</td>
+</tr>
+</table>
 
       
     </div>
