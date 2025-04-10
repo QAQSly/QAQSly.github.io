@@ -228,6 +228,57 @@
 <ul>
 <li>DNC坐标系y轴方向向上 屏幕坐标系y轴向下</li>
 </ul>
+<ol start="4">
+<li>光栅化阶段中，三角形遍历生成片元时，如何插值顶点的纹理坐标？请描述插值原理</li>
+</ol>
+<ul>
+<li>在三角形遍历生成片元（纹理坐标 颜色） 通过重心坐标进行插值</li>
+<li>插值原理： 重心坐标表示片元在三角形的相对位置 权重和为1 根据三个顶点属性按权重分配</li>
+</ul>
+<ol start="5">
+<li>深度测试（Z-Test）发生在渲染流水线的哪个阶段？如果两个片元的深度值相同，如何处理</li>
+</ol>
+<ul>
+<li>深度测试发生在片元处理阶段 光栅后之后 （光栅化生成片元之后 写入帧缓冲之前）</li>
+<li>如果深度测试函数为默认的GL_LESS（OpenGL)后续的片元会被丢弃</li>
+<li>可以通过深度测试函数GL_LEQUAL或启用深度偏移Depth Bias解决冲突<table>
+<thead>
+<tr>
+<th>深度测试模式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ZTest Less</td>
+<td>如果当前片元的深度值小于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest Greater</td>
+<td>如果当前片元的深度值大于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest LEqual</td>
+<td>如果当前片元的深度值小于或等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest GEqual</td>
+<td>如果当前片元的深度值大于或等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest Equal</td>
+<td>如果当前片元的深度值等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest NotEqual</td>
+<td>如果当前片元的深度值不等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest Always</td>
+<td>无论深度值如何，总是通过测试。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
 
       
     </div>

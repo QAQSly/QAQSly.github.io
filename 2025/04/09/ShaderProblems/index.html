@@ -17,7 +17,7 @@
 <meta property="og:description" content="测试题 应用阶段的任务中，视锥剔除（Frustum Culling）的目的是什么？如果跳过这一步会对性能产生什么影响?   视锥剔除是为了优化性能 只处理摄像机看的到的 减少几何阶段的处理量 跳过该步骤会消耗GPU性能，导致CPU提交更多的无效的绘制调用Draw Call 增加GPU在几何阶段和光栅化阶段渲染的压力   在几何阶段，顶点从模型空间变换到裁剪空间需要哪几个矩阵？请解释MVP矩阵的含义">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-04-09T06:30:43.000Z">
-<meta property="article:modified_time" content="2025-04-09T08:57:05.250Z">
+<meta property="article:modified_time" content="2025-04-10T01:55:18.623Z">
 <meta property="article:author" content="QAQSly">
 <meta name="twitter:card" content="summary">
   
@@ -235,6 +235,57 @@
 </ol>
 <ul>
 <li>DNC坐标系y轴方向向上 屏幕坐标系y轴向下</li>
+</ul>
+<ol start="4">
+<li>光栅化阶段中，三角形遍历生成片元时，如何插值顶点的纹理坐标？请描述插值原理</li>
+</ol>
+<ul>
+<li>在三角形遍历生成片元（纹理坐标 颜色） 通过重心坐标进行插值</li>
+<li>插值原理： 重心坐标表示片元在三角形的相对位置 权重和为1 根据三个顶点属性按权重分配</li>
+</ul>
+<ol start="5">
+<li>深度测试（Z-Test）发生在渲染流水线的哪个阶段？如果两个片元的深度值相同，如何处理</li>
+</ol>
+<ul>
+<li>深度测试发生在片元处理阶段 光栅后之后 （光栅化生成片元之后 写入帧缓冲之前）</li>
+<li>如果深度测试函数为默认的GL_LESS（OpenGL)后续的片元会被丢弃</li>
+<li>可以通过深度测试函数GL_LEQUAL或启用深度偏移Depth Bias解决冲突<table>
+<thead>
+<tr>
+<th>深度测试模式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ZTest Less</td>
+<td>如果当前片元的深度值小于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest Greater</td>
+<td>如果当前片元的深度值大于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest LEqual</td>
+<td>如果当前片元的深度值小于或等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest GEqual</td>
+<td>如果当前片元的深度值大于或等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest Equal</td>
+<td>如果当前片元的深度值等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest NotEqual</td>
+<td>如果当前片元的深度值不等于深度缓冲区中的值，则通过测试。</td>
+</tr>
+<tr>
+<td>ZTest Always</td>
+<td>无论深度值如何，总是通过测试。</td>
+</tr>
+</tbody></table>
+</li>
 </ul>
 
       
