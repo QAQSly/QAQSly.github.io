@@ -17,7 +17,7 @@
 <meta property="og:description" content="渲染流水线 应用阶段 输出渲染图元 几何阶段 输出屏幕空间的几何信息 光栅化阶段">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-04-09T02:46:06.000Z">
-<meta property="article:modified_time" content="2025-04-09T06:33:36.907Z">
+<meta property="article:modified_time" content="2025-04-10T02:42:27.964Z">
 <meta property="article:author" content="QAQSly">
 <meta name="twitter:card" content="summary">
   
@@ -239,6 +239,11 @@
 <li>片元着色器 逐像素着色 （计算光照 采样纹理)</li>
 <li>逐片元操作 深度测试（Z-Test）模板测试 颜色混合（Alpha Blending)</li>
 <li>最终输出 写入帧缓冲（Fram Buffer）生成屏幕像素</li>
+</ol>
+<h2 id="CPU和GPU通信"><a href="#CPU和GPU通信" class="headerlink" title="CPU和GPU通信"></a>CPU和GPU通信</h2><ol>
+<li>将数据加载到显存中 将网格和纹理加载到显存中， 等待CPU指导渲染状态</li>
+<li>设置渲染状态</li>
+<li>绘制调用 DrawCall</li>
 </ol>
 
       
