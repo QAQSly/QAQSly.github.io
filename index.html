@@ -177,6 +177,77 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-ParticleSystem" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2025/04/15/ParticleSystem/" class="article-date">
+  	<time datetime="2025-04-15T02:25:06.000Z" itemprop="datePublished">2025-04-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/04/15/ParticleSystem/">
+        ParticlSystem
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ParticleSystem"><a href="#ParticleSystem" class="headerlink" title="ParticleSystem"></a>ParticleSystem</h1><ul>
+<li>Emission 发射模块</li>
+<li>Shape 发射器形状模块</li>
+<li>Velocity over Lifetime 生命周期内速度变化模块</li>
+<li>Limit Velocity over Lifetime 生命周期内速度约束模块</li>
+<li>Inherit Velocity 继承父对象速度， 粒子速度会受到其父对象的移动的影响</li>
+<li>Force over Lifetime 生命周期内受力变化模块</li>
+<li>Color voerLifetime 生命周期内颜色变化模块</li>
+<li>Color by Speed 颜色受速度的影响模块</li>
+<li>Size over Lifetime 生命周期内粒子大小变化模块</li>
+<li>Size by Speed : 粒子大小受速度影响模块</li>
+<li>Rotation over Lifetime : 生命周期内方向变化模块</li>
+<li>Rotation by Speed 方向受速度影响模块</li>
+<li>External Forces 粒子受外力影响模块</li>
+<li>Noise 粒子受到随机噪声影响模块</li>
+<li>Collision 碰撞模块</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-Solid" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -210,46 +281,6 @@
 <li>类 模块 函数应该对扩展开放， 对修改关闭</li>
 <li>使用抽象类和接口</li>
 </ul>
-<h1 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h1><ul>
-<li>一个类只有一个发生变化的原因</li>
-<li>类应该实现单一的职责，否则就把类拆分</li>
-</ul>
-<h1 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h1><ul>
-<li>所有引用基类的地方必须能透明的使用子类的对象</li>
-<li>任何基类出现的地方 子类一定可以出现</li>
-<li>子类对父类的方法尽量不要重写和重载</li>
-</ul>
-<h1 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h1><ul>
-<li>上层模块不应该依赖底层模块，都应该依赖抽象</li>
-<li>抽象不应该依赖细节 细节应该依赖抽象</li>
-<li>写代码用到具体类时， 不和具体类交互，与具体类的上层接口交互</li>
-</ul>
-<h1 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h1><ul>
-<li>客户端不应该依赖它不需要的接口</li>
-<li>类间的依赖关系应该建立再最小的接口上</li>
-<li>每个接口不存在子类用不到却必须实现的方法 不然就将接口拆分</li>
-</ul>
-<h1 id="最少知道原则"><a href="#最少知道原则" class="headerlink" title="最少知道原则"></a>最少知道原则</h1><ul>
-<li>一个类对自己依赖的类知道的越少越好</li>
-<li>只和耦合的类通信</li>
-</ul>
-<h1 id="合成复用原则"><a href="#合成复用原则" class="headerlink" title="合成复用原则"></a>合成复用原则</h1><ul>
-<li>尽量使用对象组合&#x2F;聚合 而不是通过继承达到复用的目的</li>
-</ul>
-<h1 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h1><ul>
-<li>对类的实例化进行了抽象 将对象的创建和使用进行了分离</li>
-<li>工程模式 抽象工厂模式 单例模型 原型模式 建造者模式</li>
-</ul>
-<h1 id="结构性模式"><a href="#结构性模式" class="headerlink" title="结构性模式"></a>结构性模式</h1><ul>
-<li>适配器模式 装饰器模式 代理模式 外观模式 桥接模式 组合模式 享元模式</li>
-</ul>
-<h1 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h1><ul>
-<li>策略模式 观察者模式 迭代器模式 责任链模式 命令模式 备忘录模式 状态模式 访问者模式 中介者模式 解释器模式</li>
-</ul>
-<h1 id="并发型模式"><a href="#并发型模式" class="headerlink" title="并发型模式"></a>并发型模式</h1><ul>
-<li>生产者-消费者模式 读写锁模式 线程池模式 工作队列模式 工作窃取模式 Thead-Per-Message模式</li>
-</ul>
-<h1 id="游戏设计模式"><a href="#游戏设计模式" class="headerlink" title="游戏设计模式"></a>游戏设计模式</h1>
       
     </div>
     
@@ -261,6 +292,10 @@
       
       <div class="clearfix"></div>
     </div>
+      
+        <p class="article-more-link">
+          <a  href="/2025/04/11/Solid/#more">more >></a>
+        </p>
       
     
   </div>
