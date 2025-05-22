@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2025/5 | QAQSly的垃圾回收站</title>
+  <title>PerformanceOptimization | QAQSly的垃圾回收站</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="QAQSly的垃圾回收站">
-<meta property="og:url" content="http://example.com/archives/2025/05/index.html">
+  <meta name="description" content="性能优化 贴图   改变贴图大小 大小为2的指数 对于不需要动态修改的部分 大部分时候禁用 Read&#x2F;Write 改变 MaxSize 除非有必要 不然不使用2048*2048 小部件使用512*512 改变Compresion unity一般情况下会自动设置 建议使用UseCrunchCompress但是该压缩算法会使得构建时间变长 对于颜色通道 如果美术的图没有透明通道 则Alpha">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PerformanceOptimization">
+<meta property="og:url" content="http://example.com/2025/05/21/PerformanceOptimization/index.html">
 <meta property="og:site_name" content="QAQSly的垃圾回收站">
+<meta property="og:description" content="性能优化 贴图   改变贴图大小 大小为2的指数 对于不需要动态修改的部分 大部分时候禁用 Read&#x2F;Write 改变 MaxSize 除非有必要 不然不使用2048*2048 小部件使用512*512 改变Compresion unity一般情况下会自动设置 建议使用UseCrunchCompress但是该压缩算法会使得构建时间变长 对于颜色通道 如果美术的图没有透明通道 则Alpha">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-05-21T07:46:14.000Z">
+<meta property="article:modified_time" content="2025-05-22T01:49:15.833Z">
 <meta property="article:author" content="QAQSly">
 <meta name="twitter:card" content="summary">
   
@@ -175,84 +179,92 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-PerformanceOptimization" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2025" class="archive-year">2025</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2025/05/21/PerformanceOptimization/" class="archive-article-date">
-  	<time datetime="2025-05-21T07:46:14.000Z" itemprop="datePublished">May 21</time>
+    <div class="article-meta">
+      <a href="/2025/05/21/PerformanceOptimization/" class="article-date">
+  	<time datetime="2025-05-21T07:46:14.000Z" itemprop="datePublished">2025-05-21</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2025/05/21/PerformanceOptimization/">
-        PerformanceOptimization
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
-      </a>
+  
+    <h1 class="article-title" itemprop="name">
+      PerformanceOptimization
+      
     </h1>
   
 
-        <div class="article-info info-on-left">
-          
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2025/05/13/Date/" class="archive-article-date">
-  	<time datetime="2025-05-13T06:11:30.000Z" itemprop="datePublished">May 13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2025/05/13/Date/">
-        Date
+      </header>
+      
+      <div class="article-info article-info-post">
         
-      </a>
-    </h1>
-  
+        
 
-        <div class="article-info info-on-left">
-          
-          
-
-          
-        </div>
+        
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><ol>
+<li>贴图</li>
+</ol>
+<ul>
+<li>改变贴图大小 大小为2的指数</li>
+<li>对于不需要动态修改的部分 大部分时候禁用 Read&#x2F;Write</li>
+<li>改变 MaxSize 除非有必要 不然不使用2048*2048 小部件使用512*512</li>
+<li>改变Compresion unity一般情况下会自动设置 建议使用UseCrunchCompress但是该压缩算法会使得构建时间变长</li>
+<li>对于颜色通道 如果美术的图没有透明通道 则AlphaSource设为None 节省25%内存</li>
+<li>对于ui和2d不使用mipMap 对于ui和2d 打包图集</li>
+<li>在Quality使用TextureStreaming（该操作使用mipMap下才会成功） 可以减少内存峰值</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2025/05/13/Date/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Date</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="PerformanceOptimization" data-title="PerformanceOptimization" data-url="http://example.com/2025/05/21/PerformanceOptimization/"  data-images="https://s3.bmp.ovh/imgs/2025/04/24/af3d20da212e0aa9.png" data-content="PerformanceOptimization">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
 
 </div>
       <footer id="footer">
@@ -280,8 +292,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

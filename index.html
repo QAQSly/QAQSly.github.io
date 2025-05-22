@@ -177,6 +177,72 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-PerformanceOptimization" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2025/05/21/PerformanceOptimization/" class="article-date">
+  	<time datetime="2025-05-21T07:46:14.000Z" itemprop="datePublished">2025-05-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/05/21/PerformanceOptimization/">
+        PerformanceOptimization
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><ol>
+<li>贴图</li>
+</ol>
+<ul>
+<li>改变贴图大小 大小为2的指数</li>
+<li>对于不需要动态修改的部分 大部分时候禁用 Read&#x2F;Write</li>
+<li>改变 MaxSize 除非有必要 不然不使用2048*2048 小部件使用512*512</li>
+<li>改变Compresion unity一般情况下会自动设置 建议使用UseCrunchCompress但是该压缩算法会使得构建时间变长</li>
+<li>对于颜色通道 如果美术的图没有透明通道 则AlphaSource设为None 节省25%内存</li>
+<li>对于ui和2d不使用mipMap 对于ui和2d 打包图集</li>
+<li>在Quality使用TextureStreaming（该操作使用mipMap下才会成功） 可以减少内存峰值</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-Date" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -217,7 +283,23 @@
 </ul>
 <ul>
 <li>5-15</li>
-<li>翘二郎腿 2🗡 写错代码 1🗡 乱切页面 3🗡</li>
+<li>翘二郎腿 5🗡 写错代码 3🗡 乱切页面 5🗡</li>
+</ul>
+<ul>
+<li>5-16</li>
+</ul>
+<ul>
+<li>乱切页面1🗡 开发走神 1🗡</li>
+</ul>
+<ul>
+<li><p>5-21</p>
+</li>
+<li><p>翘二郎腿 2🗡</p>
+</li>
+<li><p>5-22</p>
+</li>
+<li><p>翘二郎腿 2🗡</p>
+</li>
 </ul>
 
       
