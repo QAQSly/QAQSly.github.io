@@ -177,6 +177,121 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Log-md" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2025/06/05/Log-md/" class="article-date">
+  	<time datetime="2025-06-05T05:51:45.000Z" itemprop="datePublished">2025-06-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/06/05/Log-md/">
+        Log.md
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h1><p>“Resume” can only be called on an active agent that has been placed on a NavMesh.<br>UnityEngine.StackTraceUtility:ExtractStackTrace ()<br>BehaviorDesigner.Runtime.Tasks.Movement.NavMeshMovement:OnStart () (at Assets&#x2F;Behavior Designer Movement&#x2F;Scripts&#x2F;Tasks&#x2F;NavMeshMovement.cs:43)<br>BehaviorDesigner.Runtime.Tasks.Movement.Pursue:OnStart () (at Assets&#x2F;Behavior Designer Movement&#x2F;Scripts&#x2F;Tasks&#x2F;Pursue.cs:26)<br>BehaviorDesigner.Runtime.BehaviorManager:PushTask (BehaviorDesigner.Runtime.BehaviorManager&#x2F;BehaviorTree,int,int)<br>BehaviorDesigner.Runtime.BehaviorManager:RunTask (BehaviorDesigner.Runtime.BehaviorManager&#x2F;BehaviorTree,int,int,BehaviorDesigner.Runtime.Tasks.TaskStatus)<br>BehaviorDesigner.Runtime.BehaviorManager:RunParentTask (BehaviorDesigner.Runtime.BehaviorManager&#x2F;BehaviorTree,int,int&amp;,BehaviorDesigner.Runtime.Tasks.TaskStatus)<br>BehaviorDesigner.Runtime.BehaviorManager:RunTask (BehaviorDesigner.Runtime.BehaviorManager&#x2F;BehaviorTree,int,int,BehaviorDesigner.Runtime.Tasks.TaskStatus)<br>BehaviorDesigner.Runtime.BehaviorManager:RunParentTask (BehaviorDesigner.Runtime.BehaviorManager&#x2F;BehaviorTree,int,int&amp;,BehaviorDesigner.Runtime.Tasks.TaskStatus)<br>BehaviorDesigner.Runtime.BehaviorManager:RunTask (BehaviorDesigner.Runtime.BehaviorManager&#x2F;BehaviorTree,int,int,BehaviorDesigner.Runtime.Tasks.TaskStatus)<br>BehaviorDesigner.Runtime.BehaviorManager:RunParentTask (BehaviorDesigner.Runtime.BehaviorManager&#x2F;BehaviorTree,int,int&amp;,BehaviorDesigner.Runtime.Tasks.TaskStatus)<br>BehaviorDesigner.Runtime.BehaviorManager:RunTask (BehaviorDesigner.Runtime.BehaviorManager&#x2F;BehaviorTree,int,int,BehaviorDesigner.Runtime.Tasks.TaskStatus)<br>BehaviorDesigner.Runtime.BehaviorManager:Tick (BehaviorDesigner.Runtime.BehaviorManager&#x2F;BehaviorTree)<br>BehaviorDesigner.Runtime.BehaviorManager:Tick ()<br>BehaviorDesigner.Runtime.BehaviorManager:Update ()</p>
+<ol>
+<li><p>图片问题 会加载图片不对 ✔</p>
+</li>
+<li><p>速度上限4  ✔</p>
+</li>
+<li><p>点击弹出 通关 -&gt; 结算 -&gt; 初始场景 ✔</p>
+</li>
+<li><p>部分物体没有碰撞体 ✔</p>
+</li>
+<li><p>站在鳄鱼王后面，鳄鱼王不动</p>
+</li>
+<li><p>玩到中后期玩家无法拾取金币 ✔</p>
+</li>
+<li><p>通关后先弹出“通关试炼”后玩家点击一下之后在弹出结算 ✔</p>
+</li>
+<li><p>冰原狼特效瞎眼 ✔</p>
+</li>
+<li><p>冰原狼没碰撞体 ✔</p>
+</li>
+<li><p>大乌龟打鬼头没伤害 ✔</p>
+</li>
+<li><p>回到标题功能没做 ✔</p>
+</li>
+<li><p>选第三个位置的buff多次计算数值 ✔</p>
+</li>
+<li><p>玩家通关后应该清除上一把的局内数据 ✔</p>
+</li>
+<li><p>没有设置心法的永久存档机制 ✔</p>
+</li>
+<li><p>回到标题在开始场景也能触发 ✔</p>
+</li>
+<li><p>第二次进入场景需要初始化 重置当前波次 ✔</p>
+</li>
+<li><p>buff 清空 ✔</p>
+</li>
+<li><p>第二次进入后 怪物生成不对齐 </p>
+</li>
+<li><p>怪物攻击没有出来伤害 技能伤害修改   ✔</p>
+</li>
+<li><p>重新开始会 唤出buff并且人物数值没有重置</p>
+</li>
+<li><p>狮子没有尾巴</p>
+</li>
+</ol>
+<p>&#x2F;&#x2F; 被怪物打死<br>&#x3D;&#x3D; 初始化debug<br>物理攻击力 37</p>
+<p>&#x3D;&#x3D; 角色死亡后 物理攻击力 37</p>
+<p>&#x3D;&#x3D; 重新创建 后 物理攻击力 20</p>
+<p>&#x2F;&#x2F; 今日bug</p>
+<ol>
+<li>进度条  &#x2F;&#x2F; ✔</li>
+<li>死亡 无法关闭ui界面  ✔</li>
+<li>第二次进入捡不了货币 退回标题没有清空物体 ✔</li>
+<li>重开游戏会出一个 ✔</li>
+<li>buff 概率问题</li>
+</ol>
+<p>&#x2F;&#x2F; 今日bug</p>
+<ol>
+<li>无法显示lv3卡牌</li>
+<li>流派未添加</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-Git-md" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -744,68 +859,6 @@
       
         <p class="article-more-link">
           <a  href="/2025/04/09/ShaderProblems/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Shader" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2025/04/09/Shader/" class="article-date">
-  	<time datetime="2025-04-09T02:46:06.000Z" itemprop="datePublished">2025-04-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/04/09/Shader/">
-        Shader
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="渲染流水线"><a href="#渲染流水线" class="headerlink" title="渲染流水线"></a>渲染流水线</h1><ol>
-<li>应用阶段 输出渲染图元</li>
-<li>几何阶段 输出屏幕空间的几何信息</li>
-<li>光栅化阶段</li>
-</ol>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a  href="/2025/04/09/Shader/#more">more >></a>
         </p>
       
     
